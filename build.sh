@@ -1,1 +1,20 @@
--e '#!/bin/bash\n\n# Install OpenJDK 11\necho "Installing OpenJDK..."\napt-get update\napt-get install -y openjdk-11-jdk\n\n# Verify Java installation\njava -version\n\n# Install Maven\necho "Installing Maven..."\napt-get install -y maven\n\n# Verify Maven installation\nmvn -version\n\n# Change to the directory containing pom.xml if necessary\ncd JFSDProject  # Adjust if your pom.xml is in a different location\n\n# Build the project\necho "Building the project with Maven..."\nmvn package  # or another command as needed' 
+#!/bin/bash
+
+# Update package list and install OpenJDK 11
+echo "Installing OpenJDK..."
+apt-get update
+apt-get install -y openjdk-11-jdk
+
+# Verify Java installation
+java -version
+
+# Install Maven
+echo "Installing Maven..."
+apt-get install -y maven
+
+# Verify Maven installation
+mvn -version
+
+# Build the project
+echo "Building the project with Maven..."
+mvn clean package  # Adjust this if needed

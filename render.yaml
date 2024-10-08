@@ -7,5 +7,5 @@ services:
     startCommand: java -jar target/JFSDProject.jar
     autoDeploy: true
     envVars:
-      - key: JAVA_VERSION
-        value: "11"
+      - key: MAVEN_VERSION
+        value: 3.8.4  # Specify your required Maven version here
