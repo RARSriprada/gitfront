@@ -3,6 +3,9 @@ services:
   - type: web
     name: JFSDProject
     env: java
-    buildCommand: mvn clean install
+    buildCommand: ./build.sh
     startCommand: java -jar target/JFSDProject.jar
     autoDeploy: true
+    envVars:
+      - key: JAVA_VERSION
+        value: "11"
