@@ -1,0 +1,8 @@
+version: 1
+services:
+  - type: web
+    name: PROJECT
+    env: java
+    buildCommand: mvn clean install
+    startCommand: java -jar target/PROJECT.jar
+    autoDeploy: true
