@@ -1,8 +1,12 @@
+
 version: 1
 services:
   - type: web
     name: JFSDProject
     env: java
-    buildCommand: ./build.sh
+    buildCommand: mvn clean install
     startCommand: java -jar target/JFSDProject.jar
     autoDeploy: true
+    envVars:
+      - key: MAVEN_VERSION
+        value: 3.8.4 # You can specify your required Maven version here
