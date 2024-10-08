@@ -1,8 +1,8 @@
 version: 1
 services:
   - type: web
-    name: PROJECT
+    name: JFSDProject
     env: java
     buildCommand: mvn clean install
-    startCommand: java -jar target/PROJECT.jar
+    startCommand: java -jar target/JFSDProject.jar
     autoDeploy: true
